@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\FilmRoom\\FilmRoom.csproj": {}
+    "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\FilmRoom.csproj": {}
   },
   "projects": {
-    "C:\\projects\\FilmRoom\\FilmRoom.csproj": {
+    "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\FilmRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\FilmRoom\\FilmRoom.csproj",
+        "projectUniqueName": "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\FilmRoom.csproj",
         "projectName": "FilmRoom",
-        "projectPath": "C:\\projects\\FilmRoom\\FilmRoom.csproj",
+        "projectPath": "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\FilmRoom.csproj",
         "packagesPath": "C:\\Users\\Vyacheslav\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\FilmRoom\\obj\\",
+        "outputPath": "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

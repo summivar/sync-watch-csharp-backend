@@ -5,9 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllHeaders", builder =>
+    options.AddDefaultPolicy(builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("http://localhost:3000")
             .AllowCredentials()
             .AllowAnyMethod()
             .AllowAnyHeader();
@@ -20,7 +20,7 @@ var app = builder.Build();
 
 app.UseRouting();
 
-app.UseCors("AllowAllHeaders");
+app.UseCors();
 
 app.UseEndpoints(endpoints =>
 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dJwVLOB8lL++ISUidZ66pyHbYa++TaN2GG9Yw5tVwNDXp+NRTyl1od2oRVFygw6/jSYzAk+zeiPO+QpbhnbXjQ==",
+  "dgSpecHash": "/Q2YomLE486S6XvEWHt6PbuXzhGdEqobdK0NkivquKNqeGaJ/rHpn8EM/9JDuYVAcfP5r9tpI24fCzK2x6Ic+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Documents\\GitHub\\test-filmroom-backend\\FilmRoom.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Documents\\GitHub\\filmroom-backend\\FilmRoom.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

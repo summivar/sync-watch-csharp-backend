@@ -7,7 +7,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("https://filmroom-frontend.herokuapp.com")
+        builder.WithOrigins("https://filmroom-frontend.herokuapp.com", "http://localhost:3000")
             .AllowCredentials()
             .AllowAnyMethod()
             .AllowAnyHeader();

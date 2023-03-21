@@ -477,5 +477,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # .vs && bin
-/.vs
-/bin
+.vs/
+bin/
+./bin

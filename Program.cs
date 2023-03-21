@@ -1,4 +1,5 @@
 using ChatService.Hubs;
+using FilmRoom.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

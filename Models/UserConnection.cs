@@ -1,4 +1,4 @@
-﻿namespace ChatService.Hubs
+﻿namespace FilmRoom.Models
 {
     public class UserConnection
     {

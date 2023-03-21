@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using System;
+using System.Linq;
+using FilmRoom.Models;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ChatService.Hubs
 {
@@ -10,31 +13,28 @@ namespace ChatService.Hubs
             _connections = connections;
         }
 
-        public async Task SendMessage(string message)
+        public override Task OnDisconnectedAsync(Exception? exception)
         {
             if (_connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))
             {
-                await Clients.GroupExcept(userConnection.Room, Context.ConnectionId)
-                    .SendAsync("ReceiveMessage", message);
+                _connections.Remove(Context.ConnectionId);
+                Clients.Group(userConnection.Room)
+                    .SendAsync("ReceiveMessage", $"User {userConnection.User} has left");
+            }
+            return base.OnDisconnectedAsync(exception);
+        }
+
+        public async Task ChangeState(bool isPlaying, double time)
+        {
+            if (_connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))
+            {
+                State newState = new State(isPlaying, time);
+
+                await Clients.Group(userConnection.Room)
+                    .SendAsync("ChangeState", newState);
             }
         }
 
-        public async Task PlayingVideo(bool play)
-        {
-            if (_connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))
-            {
-                await Clients.Groups(userConnection.Room)
-                    .SendAsync("PauseState", play);
-            }
-        }
-        public async Task RewindVideo(double seconds)
-        {
-            if (_connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))
-            {
-                await Clients.GroupExcept(userConnection.Room, Context.ConnectionId)
-                    .SendAsync("TimeState", seconds);
-            }
-        }
         public async Task ChangeVideo(string newURL)
         {
             if (_connections.TryGetValue(Context.ConnectionId, out UserConnection userConnection))

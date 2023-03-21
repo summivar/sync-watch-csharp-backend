@@ -481,3 +481,7 @@ $RECYCLE.BIN/
 bin/
 ./bin
 *.vsidx
+.vs/*
+bin/*
+./bin/*
+./.vs/*

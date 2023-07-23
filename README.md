@@ -1,4 +1,4 @@
-# filmroom-backend
+# sync-watch-csharp-backend
 
 **T**est functionality of using Websocket with SignalR. Used to create synchronous video viewing from YouTube and other sites.
 
